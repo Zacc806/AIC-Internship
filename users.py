@@ -77,3 +77,16 @@ class Teacher(Human):
 				'subject':self.subject}
 	def get_name(self):
 		return self.name
+class Staff(Human):
+	def __init__(self, name=None, familyname=None, age=None, gender=None,
+		     nationality=None, school=None, employment=None):
+		super().__init__(name=name, familyname=familyname, age=age,
+				 gender=gender, nationality=nationality)
+		self.school = school
+		self.employment = employment
+		
+	def set_school(self, school):
+		self.school = school
+		
+	def set_employment(self, employment):
+		self.employment = employment
